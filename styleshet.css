@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+    background-color: #F7EED3; /* Light beige for background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #674636; /* Dark brown for text */
+}
+
+h1 {
+    background-color: #F7EED3; /* Light beige background for the h1 */
+    padding: 10px; /* Add padding to create space inside the h1 */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+    color: #674636; /* Dark brown text color for contrast */
+    margin-bottom: 10px; /* Adjust margin if needed */
+}
+
+/* Container */
+.container {
+    background-color: #674636; /* Dark brown for container */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+    color: #FFF8E8; /* Off-white text for better readability */
+    max-width: 1200px; /* Set a maximum width to keep content centered */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Checkbox Group */
+.checkbox-group-container {
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group label {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #FFF8E8; /* Off-white text for labels */
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-link {
+    color: #FFF8E8; /* Off-white text color */
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    background: #AAB396; /* Olive grey background */
+    margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link.active {
+    color: #FFF8E8; /* Off-white text for active tab */
+    background-color: #674636; /* Dark brown for active tab */
+    border-color: #674636 #674636 #FFF8E8;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+
+/* DataTables Styling */
+.table {
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #AAB396; /* Olive grey for table headers */
+    color: #674636; /* Dark brown text */
+    text-align: center;
+}
+
+.table tfoot th {
+    background-color: #F7EED3; /* Light beige for table footers */
+    color: #674636; /* Dark brown text */
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #FFF8E8; /* Off-white for row hover */
+}
+
+/* Search Input Fields */
+.search-row input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #AAB396; /* Olive grey border color */
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    color: #674636; /* Dark brown text color for input */
+}
+
+.search-row input[type="text"]:focus {
+    border-color: #674636; /* Dark brown on focus */
+    outline: none;
+}
+
+/* Buttons */
+.btn-danger {
+    background-color: #674636; /* Dark brown for danger button */
+    border-color: #674636;
+    color: #FFF8E8; /* Off-white text on buttons */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #4B3A1E; /* Darker brown on hover */
+    border-color: #3E2C1C;
+}
+
+.btn {
+    margin: 10px 0;
+}
+
+/* DataTable Pagination and Length */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 4px;
+    color: #674636; /* Dark brown text color */
+    border: 1px solid #AAB396;
+    transition: background-color 0.3s;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #AAB396; /* Olive grey on hover */
+    border-color: #8A8D6B;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #674636; /* Dark brown for current button */
+    color: #FFF8E8;
+    border: 1px solid #674636;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #AAB396; /* Olive grey border for select element */
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+    color: #674636; /* Dark brown text color for select options */
+}
+
+/* Custom Checkboxes */
+.styled-checkbox {
+    display: none;
+}
+
+.styled-checkbox + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    color: #FFF8E8; /* Off-white text for checkboxes */
+}
+
+.styled-checkbox + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #AAB396;
+    border-radius: 4px;
+    background: #674636; /* Dark brown background */
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.styled-checkbox:checked + label:before {
+    background: #674636; /* Dark brown for checked state */
+    border-color: #674636;
+}
+
+.styled-checkbox:checked + label:after {
+    content: '✔';
+    position: absolute;
+    left: 4px;
+    top: -1px;
+    color: #FFF8E8; /* Off-white checkmark */
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .checkbox-group {
+        justify-content: flex-start;
+    }
+
+    .nav-tabs {
+        flex-wrap: wrap;
+    }
+
+    .nav-tabs .nav-link {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
